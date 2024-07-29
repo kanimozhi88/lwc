@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Conditional Rendering Example">
+        <div class="slds-p-around_medium">
+            <template if:true={displayMessage}>
+                <p>This message will be displayed because displayMessage is true.</p>
+            </template>
+            <template if:false={displayMessage}>
+                This message will not be displayed because displayMessage is false.
+            </template>
+            <lightning-button label={buttonLabel} onclick={toggleMessage}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

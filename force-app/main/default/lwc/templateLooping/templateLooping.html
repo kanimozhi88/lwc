@@ -1,0 +1,18 @@
+<!-- <template>\\
+    <lightning-card title="Template Looping Example">
+        <div class="slds-p-around_medium">
+            <template for:each={items} for:item="item" for:index="index">
+                <p key={item.id}>Item {index}: {item.name}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->
+<template>
+    <h1>Iterator Example</h1>
+    <ul>
+        <!-- Using for:each directive to iterate over items -->
+        <template for:each={items} for:item="item" for:index="index">
+            <li key={item.id}>{item.name}</li>
+        </template>
+    </ul>
+</template>

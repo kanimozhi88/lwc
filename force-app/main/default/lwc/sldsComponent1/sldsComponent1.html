@@ -1,0 +1,13 @@
+<template>
+<lightning-input type="search" placeholder="Search opportunity by Name..." onchange={handleChange}></lightning-input>
+
+
+<lightning-datatable
+    data={opportunity}
+    columns={columns}
+    key-field="Id"
+    onrowselection={handleRowSelection}
+>
+</lightning-datatable>
+<lightning-button variant="brand" label="Update" title="Update" onclick={handleClick}></lightning-button>
+</template>

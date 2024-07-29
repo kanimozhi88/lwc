@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-p-around_medium">
+            <b>Choose your interest</b>
+            <lightning-input type="checkbox" class="shopCheck" label="Shopping" onchange={handleShoppingChange}></lightning-input>
+            <lightning-input type="checkbox" class="readCheck" label="Reading" onchange={handleReadingChange}></lightning-input>
+        </div>
+
+        <!-- lwc:if -->
+        <template lwc:if={isShopping}>
+            <lightning-card title="Shopping">
+                <div class="slds-p-around_medium slds-box">
+                    <ul>
+                        <li><a href="https://www.amazon.in/">Amazon</a></li>
+                    </ul>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- lwc:elseif -->
+        <template lwc:elseif={isReading}>
+            <lightning-card title="Reading">
+                <div class="slds-p-around_medium slds-box">
+                    <ul>
+                        <li><a href="https://www.google.com">Harry Potter</a></li>
+                    </ul>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- lwc:else -->
+        <template lwc:else>
+            <div>nothing chosen</div>
+        </template>
+    </lightning-card>
+</template>

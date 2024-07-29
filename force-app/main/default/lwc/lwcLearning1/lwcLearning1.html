@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Hello">
+        <div>hello world</div>
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter some text" onkeyup={changeHandler}></lightning-input>
+            <p slot="footer">Card Footer</p>
+            <p>course name is {name}</p>
+        </div>
+    </lightning-card>
+
+      <lightning-card title="H2">
+        <div>hello world</div>
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter some text" onkeyup={trackHandler}></lightning-input>
+            <p slot="footer">Card Footer</p>
+            <p>track name is {obj.city}</p>
+        </div>
+    </lightning-card>
+</template>
